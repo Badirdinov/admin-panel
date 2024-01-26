@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FBFAFA;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 192px 1fr;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas:
+"sidebar header header"
+"sidebar main main";
+}
+
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.user__info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__items {
+  border-bottom: 1px solid #E5E5E5;
+  background: #FFF;
+  padding: 20px 60px;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__icons > .header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #B3B3B3;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__user__img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #B2CD4A;
+}
+
+.user__info > button {
+  border-radius: 10px;
+  border: 1px solid #83C251;
+  background: #FFF;
+  padding: 10px 40px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.sidebar__items {
+  border: 1px solid  #E5E5E5;
+  background:  #FFF;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sidebar__logo {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 30px;
+}
+
+
+.sidebar__menu > a{
+  text-align: start;
+  padding: 8px 0 8px 34px;
+  color: #666;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: none;
+  width: 80%;
+}
+
+.sidebar__menu > a:hover {
+  border-radius: 0 10px 10px 1px;
+  background: #83C251;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+  color: white;
+}
+
+.sidebar__menu > .active {
+  border-radius: 0 10px 10px 1px;
+  background: #83C251;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+  color: white;
+}
+
+.all-orders, .dashboard, .reports, .food, .staff {
+  margin: 10px;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid  #E5E5E5;
+  background:  #FFF;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+}

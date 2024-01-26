@@ -1,0 +1,164 @@
+
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__item {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login__item > h4 {
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'dlig' on;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    margin-bottom: 19px;
+}
+
+.login__item > h4 > span {
+    color: #be2828;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'dlig' on;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    margin-bottom: 19px;
+}
+
+.login__item > form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.login__input {
+    max-width: 320px;
+    width: 100%;
+}
+
+.login__input input {
+    width: 100%;
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid  #CCC;
+    background:  #FFF;
+}
+.login__input > .login__links> a {
+    display: block;
+    text-align: start;
+    color: #226DDA;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.login__item > form > button {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #83C251;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.login__links {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.register > h4 {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'dlig' on;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    margin-bottom: 19px;
+}
+
+.register__item {
+    width: 100%;
+}
+
+.register__item > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.register__item > form > .register__input > input {
+    width: 100%;
+    padding: 8px 16px;
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    border-radius: 10px;
+    border: 1px solid  #CCC;
+    background:  #FFF;
+}
+
+.register__item > form > button {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #83C251;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.register__link > a {
+    display: block;
+    color: #226DDA;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+

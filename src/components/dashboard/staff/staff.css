@@ -1,0 +1,42 @@
+.staff__title > h4 {
+    margin-bottom: 20px;
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'dlig' on;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+
+a {
+    text-decoration: none;
+    color: #27221A;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.staff__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.staff__table > thead > tr {
+    width: 100%;
+}
+
+.staff__table > thead > tr > th {
+    border: 1px solid #83C251;
+    padding: 8px 18px;
+    flex: 1;
+}
+
+.staff__table > tbody > tr > td {
+    border: 1px solid #83C251;
+    padding: 8px 18px;
+    flex: 1;
+}
