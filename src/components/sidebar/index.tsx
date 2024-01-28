@@ -44,7 +44,7 @@ const Sidebar = () => {
                         <Link
                             key={menu.id}
                             to={menu.path}
-                            className={pathname === menu.path ? 'active' : ''}
+                            className={pathname.startsWith(menu.path) ? 'active' : ''}
                         >
                             {menu.name}
                         </Link>

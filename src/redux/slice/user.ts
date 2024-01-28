@@ -1,19 +1,20 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {apiToken} from "../../axios";
+import {IUserInitialTypes, IUserTypes} from "../../types";
 
 
 const initialState = {
-    data: null as any,
+    data: null as IUserTypes | null,
     isLoading: false,
     error: false
 }
 
 
-export const fetchUsers = createAsyncThunk(
-    'users/fetchUsers',
-    async () => {
+export const fetchUser = createAsyncThunk(
+    'user/fetchUser',
+    async ({id}: any) => {
         try {
-            const response = await apiToken.get('/auth/users/')
+            const response = await apiToken.get(`/auth/users/${id}`)
             console.log(response.data)
             return response.data
         } catch (error) {
@@ -24,24 +25,24 @@ export const fetchUsers = createAsyncThunk(
 );
 
 
-export const usersSlice = createSlice({
-    name: 'users',
+export const userSlice = createSlice({
+    name: 'user',
     initialState,
     reducers: {},
     extraReducers: builder => {
         builder
-            .addCase(fetchUsers.pending, (state, action) => {
+            .addCase(fetchUser.pending, (state, action) => {
                 state.isLoading = true
             })
-            .addCase(fetchUsers.fulfilled, (state, action) => {
+            .addCase(fetchUser.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.data = action.payload
             })
-            .addCase(fetchUsers.rejected, (state, action) => {
+            .addCase(fetchUser.rejected, (state, action) => {
                 state.error = true
             })
     }
 })
 
 
-export default usersSlice.reducer
+export default userSlice.reducer

@@ -88,9 +88,11 @@ body {
 }
 
 .sidebar__items {
+  height: calc(100vh - 29px);
   border: 1px solid  #E5E5E5;
   background:  #FFF;
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+  border-bottom-right-radius: 8px;
 }
 
 .sidebar__logo {
@@ -142,4 +144,21 @@ body {
   border: 1px solid  #E5E5E5;
   background:  #FFF;
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.staff__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.staff__title > button {
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  background: #83C251;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  padding: 12px 28px;
+  cursor: pointer;
 }

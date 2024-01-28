@@ -37,3 +37,29 @@ export const Logo = () => {
         </svg>
     )
 }
+
+export const Upload = () => {
+    return (
+        <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_2198_71811)">
+                <circle cx="28.5" cy="22" r="16" fill="white"/>
+                <circle cx="28.5" cy="22" r="15.5" stroke="#B2CD4A"/>
+            </g>
+            <path d="M36.0016 15.9393C36.1969 16.1346 36.1969 16.4512 36.0016 16.6464L34.9587 17.6893L32.9587 15.6893L34.0016 14.6464C34.1969 14.4512 34.5134 14.4512 34.7087 14.6464L36.0016 15.9393Z" fill="#83C251"/>
+            <path d="M34.2516 18.3964L32.2516 16.3964L25.4386 23.2094C25.3837 23.2643 25.3424 23.3312 25.3178 23.4049L24.5133 25.8186C24.4481 26.014 24.634 26.1999 24.8295 26.1348L27.2432 25.3302C27.3168 25.3057 27.3837 25.2643 27.4386 25.2094L34.2516 18.3964Z" fill="#83C251"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M21.5 27.5C21.5 28.3284 22.1716 29 23 29H34C34.8284 29 35.5 28.3284 35.5 27.5V21.5C35.5 21.2239 35.2761 21 35 21C34.7239 21 34.5 21.2239 34.5 21.5V27.5C34.5 27.7761 34.2761 28 34 28H23C22.7239 28 22.5 27.7761 22.5 27.5V16.5C22.5 16.2239 22.7239 16 23 16H29.5C29.7761 16 30 15.7761 30 15.5C30 15.2239 29.7761 15 29.5 15H23C22.1716 15 21.5 15.6716 21.5 16.5V27.5Z" fill="#83C251"/>
+            <defs>
+                <filter id="filter0_d_2198_71811" x="0.5" y="0" width="56" height="56" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="6"/>
+                    <feGaussianBlur stdDeviation="6"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2198_71811"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2198_71811" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+    )
+}

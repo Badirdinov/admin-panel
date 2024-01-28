@@ -1,0 +1,76 @@
+.person {
+    border-radius: 8px;
+    border: 1px solid #E5E5E5;
+    background:  #FFF;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+    margin: 20px;
+    padding: 32px;
+    height: 88vh;
+}
+
+.person__item {
+    display: flex;
+
+}
+
+.person__avatar {
+    width: 144px;
+    height: 144px;
+    border-radius: 256px;
+    border: 1px solid #B2CD4A;
+    position: relative;
+    margin-right: 40px;
+}
+
+.person__avatar > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.person__upload {
+    position: absolute;
+    bottom: -14px;
+    right: -10px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.person__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.person__info__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.person__info__item > p {
+    width: 77px;
+}
+
+.person__info__item > input {
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    background: #FFF;
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 16px 8px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.person__info__item > button {
+    border-radius: 10px;
+    border: 1px solid #83C251;
+    background: #FFF;
+    padding: 15px 40px;
+    cursor: pointer;
+}

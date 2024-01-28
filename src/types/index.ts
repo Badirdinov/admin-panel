@@ -1,6 +1,6 @@
 
 export interface IUserInitialTypes {
-    data: IUserDataType[] | null
+    data: IUserDataType[] | IUserTypes[] | null
     isLoading: boolean
     error: boolean
 }

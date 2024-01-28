@@ -27,7 +27,6 @@ const LoginPage = () => {
                 localStorage.setItem('token', res.data.token)
                 console.log(res.data)
                 if(res.data.is_superuser){
-                    setIsAdmin(false)
                     navigate('/admin')
                 }else {
                     setIsAdmin(true)

@@ -25,6 +25,7 @@ const Header = () => {
         localStorage.removeItem('token')
     }
 
+    console.log(userData)
 
     return (
         <div className='header__items'>
