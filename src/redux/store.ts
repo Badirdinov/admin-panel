@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import users from "./slice/users";
-import user from "./slice/user";
+import getMenu from "./slice/menu";
+import food from "./slice/food";
 
 export const store = configureStore({
     reducer: {
         users: users,
-        user: user
+        menu: getMenu,
+        food: food
     },
 })
 

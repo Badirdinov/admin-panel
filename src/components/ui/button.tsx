@@ -7,14 +7,15 @@ import './ui.css';
 
 interface IPropsButton {
     type?: 'button' | 'submit' | 'reset'
-    onClick?: () => void
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
     children: React.ReactNode
-    variant?: 'primary' | 'secondary'
+    variant?: 'primary' | 'secondary' | 'danger'
+    className?: string
 }
 
-const CustomButton = ({children, type, onClick, variant}: IPropsButton) => {
+const CustomButton = ({children, type, onClick, variant, className}: IPropsButton) => {
     return (
-        <button type={type} onClick={onClick} className={variant === 'primary' ? 'custom__button__primary' : 'custom__button__secondary'}>
+        <button type={type} onClick={onClick} className={`${className} ${variant === 'primary' ? 'custom__button__primary'  : variant === 'danger' ? 'custom__button__danger' : 'custom__button__secondary'}`}>
             {children}
         </button>
     );

@@ -14,7 +14,6 @@ export const fetchUsers = createAsyncThunk(
     async () => {
         try {
             const response = await apiToken.get('/auth/users/')
-            console.log(response.data)
             return response.data
         } catch (error) {
             console.error(error);
@@ -27,7 +26,25 @@ export const fetchUsers = createAsyncThunk(
 export const usersSlice = createSlice({
     name: 'users',
     initialState,
-    reducers: {},
+    reducers: {
+        addUser: (state, action) => {
+            state.data = {...state.data, ...action.payload}
+        },
+        editUser: (state, action) => {
+            state.data.results = state.data.results.map((item: any) => {
+                if(item.id === action.payload.id){
+                    return {
+                        ...item,
+                        ...action.payload.valueEditInput,
+                    }
+                }
+                return item
+            })
+        },
+        deleteUser: (state, action) => {
+            state.data.results = state.data.results.filter((user: any) => user.id !== action.payload.id)
+        }
+    },
     extraReducers: builder => {
         builder
             .addCase(fetchUsers.pending, (state, action) => {
@@ -43,5 +60,5 @@ export const usersSlice = createSlice({
     }
 })
 
-
+export const {addUser, editUser, deleteUser} = usersSlice.actions
 export default usersSlice.reducer

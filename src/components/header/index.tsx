@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {apiToken} from "../../axios";
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
 
 
     useEffect(() => {
-        const response = apiToken.get('/auth/profile/')
+        apiToken.get('/auth/profile/')
             .then((res) => {
                 setUserData(res.data)
             })
@@ -25,7 +25,6 @@ const Header = () => {
         localStorage.removeItem('token')
     }
 
-    console.log(userData)
 
     return (
         <div className='header__items'>

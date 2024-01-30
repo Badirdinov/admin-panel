@@ -38,3 +38,21 @@
     width: 100%;
     cursor: pointer;
 }
+
+.custom__button__danger {
+    border-radius: 10px;
+    border: 1px solid #c40000;
+    background: #c40000;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.disabled {
+    background: rgba(0, 0, 0, 0.3);
+}

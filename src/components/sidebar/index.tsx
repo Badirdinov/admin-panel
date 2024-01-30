@@ -1,28 +1,27 @@
 import React from 'react';
-import {Logo} from "../../assets/svg";
-import {Link, useLocation, useNavigate, useRoutes} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 
 const MenuList = [
     {
         id: 1,
+        path: '/admin/menu',
+        name: 'Меню'
+    },
+    {
+        id: 2,
+        path: '/admin/staff',
+        name: 'Персонал'
+    },
+    {
+        id: 3,
         path: '/admin/reports',
         name: 'Отчеты'
     },
     {
-        id: 2,
+        id: 4,
         path: '/admin/all-orders',
         name: 'Все заказы'
-    },
-    {
-        id: 3,
-        path: '/admin/food',
-        name: 'Блюда'
-    },
-    {
-        id: 4,
-        path: '/admin/staff',
-        name: 'Персонал'
     },
 
 

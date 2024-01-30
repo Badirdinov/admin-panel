@@ -1,0 +1,28 @@
+
+.menu__items__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__items__button {
+    max-width: 170px !important;
+}
+
+.menu__items__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 16px;
+}
+
+.menu__items__card {
+    border-radius: 8px;
+    background: #FFF;
+    padding: 20px;
+}
+
+.menu__items__card > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -6,6 +6,7 @@
 
 body {
   background: #FBFAFA;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -137,7 +138,7 @@ body {
   color: white;
 }
 
-.all-orders, .dashboard, .reports, .food, .staff {
+.all-orders, .dashboard, .reports, .food, .staff, .menu {
   margin: 10px;
   padding: 25px;
   border-radius: 16px;
