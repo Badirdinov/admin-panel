@@ -11,9 +11,11 @@ const initialState = {
 
 export const fetchFood = createAsyncThunk(
     'food/fetchFood',
-    async ({id}: any) => {
+    async (params?: Object) => {
         try {
-            const response = await apiToken.get(`/menu/foods/${id}/`)
+            const response = await apiToken.get(`/menu/foods/`, {
+                params: {...params}
+            })
             return response.data
         }
         catch (error) {
@@ -28,7 +30,11 @@ export const fetchFood = createAsyncThunk(
 const getFood = createSlice({
     name: 'food',
     initialState,
-    reducers: {},
+    reducers: {
+        deleteFood: (state, action) => {
+            state.data.results = state.data.results.filter((food: any) => food.id !== action.payload)
+        }
+    },
     extraReducers: builder => {
         builder
             .addCase(fetchFood.pending, (state, action) => {
@@ -45,4 +51,5 @@ const getFood = createSlice({
     }
 })
 
+export const {deleteFood} = getFood.actions
 export default getFood.reducer
