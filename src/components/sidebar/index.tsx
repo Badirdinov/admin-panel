@@ -5,21 +5,26 @@ import {Link, useLocation} from "react-router-dom";
 const MenuList = [
     {
         id: 1,
-        path: '/admin/menu',
-        name: 'Меню'
+        path: '/admin/category',
+        name: 'Категории'
     },
     {
         id: 2,
+        path: '/admin/menu',
+        name: 'Блюда'
+    },
+    {
+        id: 3,
         path: '/admin/staff',
         name: 'Персонал'
     },
     {
-        id: 3,
+        id: 4,
         path: '/admin/reports',
         name: 'Отчеты'
     },
     {
-        id: 4,
+        id: 5,
         path: '/admin/all-orders',
         name: 'Все заказы'
     },

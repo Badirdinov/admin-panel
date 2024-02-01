@@ -9,6 +9,7 @@ import LoginPage from "./components/auth/login";
 import OldPage from "./components/old-page";
 import Adminstrator from "./components/admin-layout";
 import MenuPage from "./components/menu";
+import CategoryPage from "./components/category";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/admin/all-orders' element={<AllOrders/>}/>
                 <Route path='/admin/staff' element={<Staff/>}/>
                 <Route path='/admin/menu' element={<MenuPage/>}/>
+                <Route path='/admin/category' element={<CategoryPage/>}/>
             </Route>
             <Route path='/login' element={<LoginPage/>}/>
             <Route path='/register' element={<RegisterPage/>}/>
