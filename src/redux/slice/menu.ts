@@ -27,10 +27,10 @@ const fetchMenu = createSlice({
     name         : 'menu',
     initialState,
     reducers     : {
-        addMenu : (state, action) => {
+        addMenu   : (state, action) => {
             state.data = { ...state.data, ...action.payload }
         },
-        editMenu: (state, action) => {
+        editMenu  : (state, action) => {
             state.data.results = state.data.results.map((item : any) => {
                 if ( item.id === action.payload.id ) {
                     return {
@@ -40,6 +40,9 @@ const fetchMenu = createSlice({
                 }
                 return item
             })
+        },
+        deleteMenu: (state, action) => {
+            state.data.results = state.data.results.filter((item : any) => item.id !== action.payload)
         }
     },
     extraReducers: builder => {
@@ -59,5 +62,5 @@ const fetchMenu = createSlice({
 })
 
 
-export const { editMenu } = fetchMenu.actions
+export const { addMenu, editMenu, deleteMenu } = fetchMenu.actions
 export default fetchMenu.reducer

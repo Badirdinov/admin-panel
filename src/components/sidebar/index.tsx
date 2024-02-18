@@ -14,6 +14,11 @@ const MenuList = [
         name: 'Блюда'
     },
     {
+        id: 2,
+        path: '/admin/tables',
+        name: 'Столы'
+    },
+    {
         id: 3,
         path: '/admin/staff',
         name: 'Персонал'

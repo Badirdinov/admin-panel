@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 //styles
 import './category.css'
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { editMenu, getMenu } from "../../redux/slice/menu";
+import { addMenu, deleteMenu, editMenu, getMenu } from "../../redux/slice/menu";
 import CustomButton from "../ui/button";
 import Modal from "../modal";
 import CustomInput from "../ui/input";
@@ -51,7 +51,20 @@ const CategoryPage = () => {
         apiToken.post('/menu/', addInputValue)
           .then((res) => {
               if ( res.status === 201 ) {
+                  dispatch(addMenu(addInputValue))
                   setIsActiveAddModal(false)
+              }
+          })
+          .catch((error) => {
+              console.log(error)
+          })
+    }
+    
+    const handleDeleteMenu = (id : any) => {
+        apiToken.delete(`/menu/${ id }/`)
+          .then((res) => {
+              if ( res.status === 204 ) {
+                  dispatch(deleteMenu(id))
               }
           })
           .catch((error) => {
@@ -61,7 +74,7 @@ const CategoryPage = () => {
     
     useEffect(() => {
         dispatch(getMenu())
-    }, [ dispatch ]);
+    }, [ dispatch, isActiveAddModal ]);
     
     
     return (
@@ -121,7 +134,12 @@ const CategoryPage = () => {
                                       variant={ 'primary' }
                                     >
                                         Редактировать</CustomButton>
-                                    <CustomButton variant={ 'danger' }>Удалить</CustomButton>
+                                    <CustomButton
+                                      onClick={ () => handleDeleteMenu(item.id) }
+                                      variant={ 'danger' }
+                                    >
+                                        Удалить
+                                    </CustomButton>
                                 </div>
                             </div>
                           )) }

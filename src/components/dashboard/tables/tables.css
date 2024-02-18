@@ -1,0 +1,45 @@
+.tables__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.tables__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.table {
+    border: 1px solid #43a047;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.table p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.table_number > p > span {
+    width: 40px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid #43a047;
+}
+
+.table_status > p > span {
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid #43a047;
+}
+
+.taken {
+    background: #be2828;
+    color: white;
+}

@@ -4,14 +4,22 @@ import React from 'react';
 //styles
 import './ui.css';
 
-const CustomSelect = () => {
+interface IPropsSelect
+    {
+        value? : any
+        options? : any
+        onChange? : (e : React.ChangeEvent<HTMLSelectElement>) => void
+        name? : any
+    }
+
+const CustomSelect = ({ value, name, options, onChange } : IPropsSelect) => {
     return (
       <>
-          <select className='select'>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+          <select className='select' name={ name } onChange={ onChange }>
+              { options.map((items : any) => (
+                <option value={ items.id } key={ items.id }
+                >{ items.name }</option>
+              )) }
           </select>
       </>
     );

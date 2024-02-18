@@ -138,7 +138,7 @@ body {
   color: white;
 }
 
-.all-orders, .dashboard, .reports, .food, .staff, .menu, .foods, .category {
+.all-orders, .dashboard, .reports, .food, .staff, .menu, .foods, .category, .tables {
   margin: 10px;
   padding: 25px;
   border-radius: 16px;

@@ -31,25 +31,24 @@ const Staff = () => {
     }
 
     const handleChangeEdit = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.files)
         if(e.target.files) {
-            setValueEditInput({...valueEditInput, [e.target.name]: e.target.files[0]})
+            setValueEditInput({...valueEditInput, avatar: e.target.files[0]})
         }
         setValueEditInput({...valueEditInput, [e.target.name]: e.target.value})
     }
-
-
+    console.log(inputValue)
     const handleAddUser = (e: any) => {
         e.preventDefault();
-        const flattenedInputValue = Object.entries(inputValue).reduce(
-                    (acc: any, [key, value]) => {
+        const flattenedInputValue = Object.entries(inputValue)
+          .reduce((acc: any, [key, value]) => {
                         acc[key] = value
                         return acc
-                    }, {}
-                )
+                    }, {})
         apiToken.post('/auth/users/', flattenedInputValue, {
             headers: {
                 'Content-Type': 'multipart/form-data',
-            },
+            }
         })
             .then((res) => {
                 if (res.status === 201) {
@@ -67,7 +66,11 @@ const Staff = () => {
 
     const handleEditSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        apiToken.patch(`/auth/users/${edit.id}/`, valueEditInput)
+        apiToken.patch(`/auth/users/${edit.id}/`, valueEditInput, {
+            headers:{
+                'Content-type' : 'multipart/form-data'
+            }
+        })
             .then((res) => {
                 if (res.status === 200) {
                     dispatch(editUser({valueEditInput, id: edit.id}));
@@ -95,7 +98,7 @@ const Staff = () => {
     const handleDeleteUser = (item: any) => {
         apiToken.delete(`/auth/users/${item.id}/`)
             .then((res) => {
-                dispatch(deleteUser(item))
+                if(res) dispatch(deleteUser(item))
             })
             .catch((error) => {
                 console.log(error)
@@ -174,7 +177,6 @@ const Staff = () => {
                     </div>
 
                 </div>
-
                 <table className='staff__table'>
                     <thead>
                     <tr>

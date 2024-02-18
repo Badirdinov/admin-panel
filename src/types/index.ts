@@ -29,3 +29,24 @@ export interface IUserTypes {
     phone :  string
     role :  string
 }
+
+export interface ITablesTypes {
+    data: IDataType | null
+    isLoading: boolean
+    error: boolean
+}
+
+interface IDataType {
+    count : number | null
+    next : number | null
+    previous : number | null
+    results : ITablesDataType[]
+}
+
+interface ITablesDataType {
+    created_at : string
+    id : number
+    is_taken : boolean
+    name : string
+    updated_at : string
+}
