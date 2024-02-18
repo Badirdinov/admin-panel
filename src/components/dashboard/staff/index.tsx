@@ -109,7 +109,6 @@ const Staff = () => {
         dispatch(fetchUsers())
     }, [dispatch]);
 
-
     return (
         <>
             {isChangeUserModal &&
