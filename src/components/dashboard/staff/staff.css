@@ -29,7 +29,6 @@ a {
 }
 
 .staff__table > thead > tr > th {
-    border-bottom: 1px solid rgba(131, 194, 81, 0.6);
     text-align: start;
     padding: 16px 18px;
     flex: 1;
@@ -41,7 +40,6 @@ a {
 
 
 .staff__table > tbody > tr > td {
-    border-bottom: 1px solid rgba(131, 194, 81, 0.6);
     padding: 8px 18px;
     flex: 1;
 }
